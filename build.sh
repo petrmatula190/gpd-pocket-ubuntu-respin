@@ -72,6 +72,7 @@ if [ -n "$BIONICBEAVER" ]; then
 	installpackages+="libva2 "
 else
 	installpackages+="libva1 "
+	installpackages+="gksu " # Required by traybar rotation indicator to reset touchscreen, but no longer available in bionic
 fi
 
 installpackages+="i965-va-driver "
@@ -81,7 +82,6 @@ installpackages+="gstreamer1.0-vaapi "
 installpackages+="vlc "
 # Utilities for traybar rotation indicator and fan handling
 installpackages+="python-gi " # Required by traybar rotation indicator
-installpackages+="gksu " # Required by traybar rotation indicator to reset touchscreen
 installpackages+="git " # Required by traybar rotation indicator to download repository
 installpackages+="python " # Required by traybar rotation indicator & fan script
 installpackages+="gir1.2-appindicator3-0.1 " # Required by traybar rotation indicator
